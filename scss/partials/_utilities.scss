@@ -29,7 +29,8 @@ html {
 }
 
 body {
-    font-size: 14px;
+    font-size: $body-font-size;
+    // font-family: $body-font-family;
 }
 
 ul,
@@ -61,6 +62,11 @@ button {
 
 .d-flex {
     display: flex;
+}
+
+/* Fonts */
+.playFair__font {
+    font-family: 'Playfair Display', serif;
 }
 
 /*

@@ -6,8 +6,77 @@
 header {
     background-image: url(../images/background/bg.jpg);
     background-size: cover;
+    position: relative;
     height: 100%;
     .overlay {
-        padding-top: 92px;
+        padding-top: 200px;
+    }
+    .title {
+        font-size: 55px;
+        color: $white;
+        text-align: $text-align-end;
+        line-height: 1;
+        font-weight: $font-weight-700;
+        .small__title {
+            font-weight: $font-weight-400;
+            font-size: 12px;
+            display: block;
+            letter-spacing: 9px;
+            opacity: 0.8;
+            margin-bottom: 25px;
+        }
+    }
+    .header__info {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        .container {
+            position: relative;
+        }
+        .info__img {
+            margin-bottom: -100px;
+            box-shadow: 2px 12px 40px 0 rgba($black ,0.25);
+            border-radius: 50%;
+            float: right;
+        }
+        .info {
+            font-size: 12px;
+            color: $white;
+            text-align: $text-align-end;
+            position: absolute;
+            right: 0;
+            bottom: 40px;
+            .phone__number {
+                font-size: 26px;
+                margin: 0 0 25px;
+            }
+            .small__title {
+                color: $smokeWhite;
+                margin: 0;
+                .white {
+                    color: $white;
+                }
+            }
+        }
+    }
+    @media #{$MediumDevices} {
+        height: 60%;
+        .info__img {
+            width: 350px;
+        }
+    }
+    @media #{$smallDevices} {
+        .info__img {
+            display: none;
+        }
+        .title {
+            text-align: $text-align-start;
+        }
+        .header__info {
+            .info {
+                text-align: $text-align-start;
+            }
+        }
     }
 }

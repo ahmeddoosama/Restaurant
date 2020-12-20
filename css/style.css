@@ -59,6 +59,11 @@ button:focus {
   display: flex;
 }
 
+/* Fonts */
+.playFair__font {
+  font-family: "Playfair Display", serif;
+}
+
 /*
     > Section
 */
@@ -89,10 +94,79 @@ section {
 header {
   background-image: url(../images/background/bg.jpg);
   background-size: cover;
+  position: relative;
   height: 100%;
 }
 header .overlay {
-  padding-top: 92px;
+  padding-top: 200px;
+}
+header .title {
+  font-size: 55px;
+  color: #FFF;
+  text-align: end;
+  line-height: 1;
+  font-weight: 700;
+}
+header .title .small__title {
+  font-weight: 400;
+  font-size: 12px;
+  display: block;
+  letter-spacing: 9px;
+  opacity: 0.8;
+  margin-bottom: 25px;
+}
+header .header__info {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+header .header__info .container {
+  position: relative;
+}
+header .header__info .info__img {
+  margin-bottom: -100px;
+  box-shadow: 2px 12px 40px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  float: right;
+}
+header .header__info .info {
+  font-size: 12px;
+  color: #FFF;
+  text-align: end;
+  position: absolute;
+  right: 0;
+  bottom: 40px;
+}
+header .header__info .info .phone__number {
+  font-size: 26px;
+  margin: 0 0 25px;
+}
+header .header__info .info .small__title {
+  color: #ccc;
+  margin: 0;
+}
+header .header__info .info .small__title .white {
+  color: #FFF;
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  header {
+    height: 60%;
+  }
+  header .info__img {
+    width: 350px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  header .info__img {
+    display: none;
+  }
+  header .title {
+    text-align: start;
+  }
+  header .header__info .info {
+    text-align: start;
+  }
 }
 
 /* ========== Contain Footer style ========== */

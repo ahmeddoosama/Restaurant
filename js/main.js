@@ -23,7 +23,7 @@ $(document).ready(function() {
     /* Scroll down */
     let $header = $('header');
     $(window).scroll(function() {
-        if($(window).scrollTop() >= $header.height() - 80) {
+        if($(window).scrollTop() >= $header.height() - 500) {
             $nav.addClass('sticky')
         }else {
             $nav.removeClass('sticky')
