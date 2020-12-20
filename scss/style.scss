@@ -1,0 +1,15 @@
+/*
+Name: 			style.scss
+Written by: 	Ahmed Osama Bedawy - (https://github.com/ahmeddoosama)
+*/
+
+@import 'partials/utilities';
+
+@import 'components/buttons';
+@import 'components/slider';
+
+@import 'layout/header';
+@import 'layout/navbar';
+@import 'layout/footer';
+
+@import 'pages/home';

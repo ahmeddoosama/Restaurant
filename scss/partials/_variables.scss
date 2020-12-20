@@ -1,0 +1,25 @@
+// desc: 'Contain all website initial values for sections and headlines and divs and main inheritance for others'
+@import "../partials/colors";
+
+
+// Fonts Weight
+$font-weight-100: 100;
+$font-weight-400: 400;
+$font-weight-500: 500;
+$font-weight-600: 600;
+$font-weight-bold: bold;
+$font-weight-bolder: bolder;
+
+// Text Aligns
+$text-align-center: center;
+$text-align-start: start;
+$text-align-end: end;
+
+// Body Variable
+// $body-font-size: 13px;
+// $body-font-family: "Barlow Semi Condensed", sans-serif;
+
+
+/* Responsive */
+$smallDevices: "only screen and (max-width: 767px)"; // EX >> @media #{$smallDevices}
+$AllLargeDevices: "only screen and (min-width: 768px)";

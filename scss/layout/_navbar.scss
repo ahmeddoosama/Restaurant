@@ -1,0 +1,220 @@
+/* ========== Contain Footer style ========== */
+@import '../partials/variables';
+@import '../partials/colors';
+
+/* ========== Navbar ========== */
+nav {
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+
+    .logo {
+        width: 35px;
+        overflow: hidden;
+        position: relative;
+
+        &::before {
+            content: '';
+            display: block;
+            padding-top: 131.4%;
+        }
+
+        img {
+            width: 100%;
+            height: 200%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+        }
+    }
+
+    .nav-btn {
+        display: none;
+    }
+
+    .nav-list {
+        width: 100%;
+        position: relative;
+        top: 10px;
+        text-align: $text-align-end;
+        font-size: 16px;
+        font-weight: $font-weight-600;
+
+        .list-item {
+            display: inline-block;
+            color: $white;
+            margin-left: 40px;
+            position: relative;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:last-child {
+                margin-left: 80px;
+
+                .icon {
+                    margin-left: 5px;
+                    vertical-align: middle;
+                    position: relative;
+                    right: 0;
+                    transition: right 0.4s;
+                }
+            }
+        }
+    }
+
+    &.sticky {
+        background-color: $white;
+        box-shadow: 0 1px 5px 0 rgba($black, 0.2);
+
+        .logo {
+            img {
+                top: -100%;
+            }
+        }
+
+        .nav-list {
+            .list-item {
+                color: $gray;
+            }
+        }
+    }
+
+    @media #{$AllLargeDevices} {
+        .nav-list {
+            .list-item {
+                &::before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    bottom: -8px;
+                    right: 0;
+                    left: 0;
+                    width: 0;
+                    height: 3px;
+                    background-color: $white;
+                    transition: width 0.4s;
+                }
+
+                &:hover:before {
+                    width: 100%;
+                }
+
+                &:hover:last-child {
+                    .icon {
+                        right: -5px;
+                    }
+                }
+            }
+        }
+
+        &.sticky {
+            .nav-list {
+                .list-item:before {
+                    background-color: $gray;
+                }
+            }
+        }
+    }
+
+    @media #{$smallDevices} {
+        .nav-btn {
+            position: absolute;
+            display: block;
+            right: 25px;
+            width: 40px;
+            background: unset;
+            border: none;
+            margin-top: 16px;
+
+            .btn-line {
+                display: block;
+                height: 3px;
+                margin-bottom: 6px;
+                background-color: $white;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .nav-list {
+            overflow-x: hidden;
+        }
+
+        &:not(.active) {
+            .nav-list {
+                .list-item {
+                    right: -200px;
+                }
+            }
+        }
+
+        .nav-list {
+            width: 200px;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            margin: 0;
+            padding: 0;
+            text-align: $text-align-center;
+
+            .list-item {
+                position: relative;
+                right: 0;
+                display: block;
+                margin-left: 0;
+                background-color: $gray;
+                margin-bottom: 10px;
+                transition: right .3s;
+
+                &:nth-child(2) {
+                    transition-delay: 0.2s;
+                }
+
+                &:nth-child(3) {
+                    transition-delay: 0.4s;
+                }
+
+                &:nth-child(4) {
+                    transition-delay: 0.6s;
+                }
+
+                &:nth-child(5) {
+                    transition-delay: 1.0s;
+                }
+
+                a {
+                    border-bottom: 1px solid $black;
+                    padding: 15px;
+                    display: block;
+                }
+
+                &:last-child {
+                    margin-left: 0;
+                }
+
+                &:hover,
+                &:active {
+                    background-color: $black;
+                }
+            }
+        }
+
+        &.sticky {
+            .btn-line {
+                background-color: $gray;
+            }
+
+            .list-item {
+                color: $white !important;
+            }
+        }
+    }
+}
