@@ -1,4 +1,4 @@
-/* ========== Contain Footer style ========== */
+/* ========== Contain Header style ========== */
 @import '../partials/variables';
 @import '../partials/colors';
 
@@ -9,22 +9,12 @@ header {
     position: relative;
     height: 100%;
     .overlay {
-        padding-top: 200px;
+        padding-top: 180px;
     }
     .title {
-        font-size: 55px;
         color: $white;
         text-align: $text-align-end;
-        line-height: 1;
-        font-weight: $font-weight-700;
-        .small__title {
-            font-weight: $font-weight-400;
-            font-size: 12px;
-            display: block;
-            letter-spacing: 9px;
-            opacity: 0.8;
-            margin-bottom: 25px;
-        }
+        font-size: 55px;
     }
     .header__info {
         position: absolute;
@@ -54,9 +44,6 @@ header {
             .small__title {
                 color: $smokeWhite;
                 margin: 0;
-                .white {
-                    color: $white;
-                }
             }
         }
     }

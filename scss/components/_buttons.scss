@@ -1,0 +1,33 @@
+/* ========== Contain Button style ========== */
+@import '../partials/variables';
+@import '../partials/colors';
+
+/* ========== Button ========== */
+.btn {
+    font-size: 17px;
+    border: 1px solid $gray;
+    padding: 15px 23px;
+    text-transform: uppercase;
+    font-weight: 600;
+    display: inline-block;
+    background-color: unset;
+    border-radius: 0;
+    &:focus {
+        outline-offset: unset;
+        box-shadow: unset;
+    }
+    &:hover {
+        background-color: $smokeWhite;
+    }
+}
+
+.reservation-btn {
+    margin-top: 80px;
+    @media #{$AllLargeDevices} {
+        margin-top: 20px;
+    }
+    @media #{$smallDevices} {
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+}

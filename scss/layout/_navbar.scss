@@ -1,4 +1,4 @@
-/* ========== Contain Footer style ========== */
+/* ========== Contain Navbar style ========== */
 @import '../partials/variables';
 @import '../partials/colors';
 
@@ -150,6 +150,9 @@ nav {
 
         &:not(.active) {
             .nav-list {
+                transition: 1s;
+                transition-delay: 1.4s;
+                margin-right: -200px;
                 .list-item {
                     right: -200px;
                 }

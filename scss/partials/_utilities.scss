@@ -69,6 +69,11 @@ button {
     font-family: 'Playfair Display', serif;
 }
 
+/* Font-italic */
+.italic {
+    font-style: italic;
+}
+
 /*
     > Section
 */
@@ -89,4 +94,61 @@ section {
     background-color: rgba(0,0,0,0.5);
     z-index: 2;
     cursor: pointer;
+}
+
+/*
+    > Titles
+*/
+.title {
+    color: $gray;
+    line-height: 1;
+    .small__title {
+        font-weight: $font-weight-600;
+        font-size: 12px;
+        display: block;
+        letter-spacing: 9px;
+        color: $smokeGray;
+        margin-bottom: 25px;
+    }
+    .section__title {
+        font-size: 45px;
+        font-weight: $font-weight-700;
+    }
+}
+
+/*
+    > Paragraph
+*/
+.paragraph {
+    color: $smokeGray;
+    line-height: 1.8;
+}
+
+
+/* Class Colors */
+.white {
+    color: $white;
+}
+
+.black {
+    color: $black;
+}
+
+/* Ratios */
+.ratio-holder {
+    position: relative;
+    overflow: hidden;
+    .ratio {
+        padding-top: 100%;
+        &.video-ratio {
+            padding-top: 120%;
+        }
+    }
+    .ratio-content {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
 }
