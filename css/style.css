@@ -261,6 +261,27 @@ section {
 .slider {
   padding: 50px 0;
 }
+.slider .slider__container {
+  position: relative;
+  padding: 0 45px;
+}
+.slider .slider__container .slider__control .arrow {
+  height: 46px;
+  background: none;
+  border: none;
+  position: absolute;
+  top: 50%;
+  margin-top: -23px;
+  font-size: 46px;
+  line-height: 1;
+  z-index: 3;
+}
+.slider .slider__container .slider__control .arrow.next {
+  right: 0;
+}
+.slider .slider__container .slider__control .arrow.prev {
+  left: 0;
+}
 
 /* ========== Contain Card style ========== */
 /* Colors */
@@ -574,17 +595,20 @@ main .our__story .video::before {
 main .menu__section {
   text-align: center;
 }
-main .menu__section .slider .card__groub .card .card__img.have__price {
+main .menu__section .slider .slider__container .menu__slider {
+  position: relative;
+}
+main .menu__section .slider .slider__container .menu__slider .card .card__img.have__price {
   margin-bottom: 50px;
 }
-main .menu__section .slider .card__groub .card .card__img .price__holder {
+main .menu__section .slider .slider__container .menu__slider .card .card__img .price__holder {
   position: absolute;
   bottom: -40px;
   right: 0;
   left: 0;
   text-align: center;
 }
-main .menu__section .slider .card__groub .card .card__img .price__holder .price {
+main .menu__section .slider .slider__container .menu__slider .card .card__img .price__holder .price {
   width: 80px;
   height: 80px;
   display: inline-block;
@@ -594,9 +618,9 @@ main .menu__section .slider .card__groub .card .card__img .price__holder .price 
   line-height: 80px;
   box-shadow: 0px 0px 0px 5px rgba(255, 255, 255, 0.4);
 }
-main .menu__section .slider .link {
+main .menu__section .link {
   font-size: 20px;
-  margin-top: 35px;
+  margin-bottom: 35px;
 }
 
 /*# sourceMappingURL=style.css.map */

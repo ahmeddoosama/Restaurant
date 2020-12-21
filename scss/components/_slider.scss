@@ -5,4 +5,27 @@
 /* ========== Slider ========== */
 .slider {
     padding: 50px 0;
+    .slider__container {
+        position: relative;
+        padding: 0 45px;
+        .slider__control {
+            .arrow {
+                height: 46px;
+                background: none;
+                border: none;
+                position: absolute;
+                top: 50%;
+                margin-top: -23px;
+                font-size: 46px;
+                line-height: 1;
+                z-index: 3;
+                &.next {
+                    right: 0;
+                }
+                &.prev {
+                    left: 0;
+                }
+            }
+        }
+    }
 }
