@@ -139,12 +139,46 @@ section {
 .ratio-holder .ratio.video-ratio {
   padding-top: 120%;
 }
+.ratio-holder .ratio.menu-ratio {
+  padding-top: 70%;
+}
 .ratio-holder .ratio-content {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+}
+.ratio-holder .ratio-content .img {
+  width: 100%;
+  min-height: 100%;
+}
+
+/* bg-pattern */
+.bg-pattern {
+  background-image: url("../images/background/pattern.jpg");
+}
+
+/* Clickable anchor */
+.clickable__item {
+  position: relative;
+}
+.clickable__item .clickable__anchor {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* links */
+.link, .link:hover, .link:focus {
+  font-size: 16px;
+  text-decoration: underline;
+  letter-spacing: 1px;
+  font-weight: 700;
+  display: inline-block;
 }
 
 /* ========== Contain Button style ========== */
@@ -217,6 +251,35 @@ section {
   vertical-align: middle;
   margin-left: 5px;
   font-size: 12px;
+}
+
+/* ========== Contain Slider style ========== */
+/* Colors */
+/* Responsive */
+/* Colors */
+/* ========== Slider ========== */
+.slider {
+  padding: 50px 0;
+}
+
+/* ========== Contain Card style ========== */
+/* Colors */
+/* Responsive */
+/* Colors */
+/* ========== Card ========== */
+.card {
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+  background-color: #FFF;
+  padding: 20px;
+  text-align: center;
+}
+.card .card__title {
+  font-size: 20px;
+}
+.card .card__img {
+  position: relative;
 }
 
 /* ========== Contain Header style ========== */
@@ -470,9 +533,12 @@ nav.sticky .nav-list .list-item {
 main {
   /* Start our story Section */
   /* End our story Section */
+  /* Start Menu Section */
+  /* End Menu Section */
 }
 main .our__story {
   padding-top: 160px;
+  padding-bottom: 60px;
 }
 main .our__story .section__body .paragraph {
   margin: 40px 0;
@@ -504,6 +570,33 @@ main .our__story .video::before {
     margin: 0 auto;
     float: none;
   }
+}
+main .menu__section {
+  text-align: center;
+}
+main .menu__section .slider .card__groub .card .card__img.have__price {
+  margin-bottom: 50px;
+}
+main .menu__section .slider .card__groub .card .card__img .price__holder {
+  position: absolute;
+  bottom: -40px;
+  right: 0;
+  left: 0;
+  text-align: center;
+}
+main .menu__section .slider .card__groub .card .card__img .price__holder .price {
+  width: 80px;
+  height: 80px;
+  display: inline-block;
+  background-color: #FFF;
+  font-size: 35px;
+  border-radius: 50%;
+  line-height: 80px;
+  box-shadow: 0px 0px 0px 5px rgba(255, 255, 255, 0.4);
+}
+main .menu__section .slider .link {
+  font-size: 20px;
+  margin-top: 35px;
 }
 
 /*# sourceMappingURL=style.css.map */
