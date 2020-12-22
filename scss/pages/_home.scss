@@ -49,7 +49,7 @@ main {
         text-align: $text-align-center;
         .slider {
             .slider__container {
-                .menu__slider {
+                .slider__group {
                     position: relative;
                     .slider__item {
                         .card {
@@ -134,4 +134,20 @@ main {
         }
     }
     /* End testimonials Section */
+
+    /* Start Chief testimonials Section */
+    .chief__testimonials {
+        @media #{$smallDevices} {
+            .title,
+            .section__body {
+                text-align: $text-align-center;
+            }
+            .title {
+                h2 {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+    /* End Chief testimonials Section */
 }

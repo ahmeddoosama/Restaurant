@@ -8,12 +8,15 @@
     .slider__container {
         position: relative;
         padding: 0 60px;
-        .menu__slider {
+        .slider__group {
             overflow: hidden;
             .slider__banner {
                 position: relative;
                 left: 0;
                 transition: left 0.4s;
+                .slider__item {
+                    float: left;
+                }
             }
         }
         .slider__control {
@@ -36,6 +39,24 @@
                 }
                 &.prev {
                     left: 0;
+                }
+            }
+        }
+    }
+}
+
+
+/* Chief testimonials Slider */
+.slider {
+    .chief__slider {
+        padding: 0;
+        .slider__control {
+            .arrow {
+                position: static;
+                margin-top: 0;
+                font-size: 21px;
+                &.prev {
+                    margin-right: 10px;
                 }
             }
         }

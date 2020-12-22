@@ -60,8 +60,21 @@ button {
     }
 }
 
+/* Classes */
 .d-flex {
     display: flex;
+}
+
+.text_align_start {
+    text-align: $text-align-start;
+}
+
+.text_align_center {
+    text-align: $text-align-center;
+}
+
+.text_align_end {
+    text-align: $text-align-end;
 }
 
 /* Fonts */

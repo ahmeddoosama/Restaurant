@@ -55,8 +55,21 @@ button:focus {
   outline: none;
 }
 
+/* Classes */
 .d-flex {
   display: flex;
+}
+
+.text_align_start {
+  text-align: start;
+}
+
+.text_align_center {
+  text-align: center;
+}
+
+.text_align_end {
+  text-align: end;
 }
 
 /* Fonts */
@@ -265,13 +278,16 @@ section {
   position: relative;
   padding: 0 60px;
 }
-.slider .slider__container .menu__slider {
+.slider .slider__container .slider__group {
   overflow: hidden;
 }
-.slider .slider__container .menu__slider .slider__banner {
+.slider .slider__container .slider__group .slider__banner {
   position: relative;
   left: 0;
   transition: left 0.4s;
+}
+.slider .slider__container .slider__group .slider__banner .slider__item {
+  float: left;
 }
 .slider .slider__container .slider__control .arrow {
   height: 46px;
@@ -293,6 +309,19 @@ section {
 }
 .slider .slider__container .slider__control .arrow.prev {
   left: 0;
+}
+
+/* Chief testimonials Slider */
+.slider .chief__slider {
+  padding: 0;
+}
+.slider .chief__slider .slider__control .arrow {
+  position: static;
+  margin-top: 0;
+  font-size: 21px;
+}
+.slider .chief__slider .slider__control .arrow.prev {
+  margin-right: 10px;
 }
 
 /* ========== Contain Card style ========== */
@@ -570,6 +599,8 @@ main {
   /* End Menu Section */
   /* Start testimonials Section */
   /* End testimonials Section */
+  /* Start Chief testimonials Section */
+  /* End Chief testimonials Section */
 }
 main .our__story {
   padding-top: 160px;
@@ -609,20 +640,20 @@ main .our__story .video::before {
 main .menu__section {
   text-align: center;
 }
-main .menu__section .slider .slider__container .menu__slider {
+main .menu__section .slider .slider__container .slider__group {
   position: relative;
 }
-main .menu__section .slider .slider__container .menu__slider .slider__item .card .card__img.have__price {
+main .menu__section .slider .slider__container .slider__group .slider__item .card .card__img.have__price {
   margin-bottom: 50px;
 }
-main .menu__section .slider .slider__container .menu__slider .slider__item .card .card__img .price__holder {
+main .menu__section .slider .slider__container .slider__group .slider__item .card .card__img .price__holder {
   position: absolute;
   bottom: -40px;
   right: 0;
   left: 0;
   text-align: center;
 }
-main .menu__section .slider .slider__container .menu__slider .slider__item .card .card__img .price__holder .price {
+main .menu__section .slider .slider__container .slider__group .slider__item .card .card__img .price__holder .price {
   width: 80px;
   height: 80px;
   display: inline-block;
@@ -676,6 +707,15 @@ main .testimonials__section .testimonial__author h5:after {
   background-color: #FFF;
   vertical-align: middle;
   margin-left: 3px;
+}
+@media only screen and (max-width: 767px) {
+  main .chief__testimonials .title,
+main .chief__testimonials .section__body {
+    text-align: center;
+  }
+  main .chief__testimonials .title h2 {
+    font-size: 30px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -30,10 +30,16 @@ $(document).ready(function() {
         }
     });
 
-    /* Slider Function */
+    /**
+     *
+        > Sliders Function
+     *
+    **/
+
+    /* Menu Slider  */
     function menuSlider() {
-        let $sliderContainer = $('.slider__container');
-        let $slider = $sliderContainer.find('.menu__slider');
+        let $sliderContainer = $('.menu__slider');
+        let $slider = $sliderContainer.find('.slider__group');
         let $sliderBanner = $sliderContainer.find('.slider__banner');
         let $sliderItems = $sliderBanner.find('.slider__item');
         let $nextBtn = $sliderContainer.find('.arrow.next');
@@ -45,6 +51,7 @@ $(document).ready(function() {
         let activeSlides = slideToShow;
 
         function responsiveSlides() {
+            activeSlides -= slideToShow;
             if($(window).width() <= 991 && $(window).width() > 550){
                 slideToShow = 2;
             }else if($(window).width() <= 550){
@@ -53,7 +60,7 @@ $(document).ready(function() {
             else {
                 slideToShow = 3;
             }
-            
+            activeSlides += slideToShow;
         }responsiveSlides();
 
 
@@ -63,7 +70,7 @@ $(document).ready(function() {
         $sliderItems.outerWidth(parseInt($slider.width() / slideToShow));
 
         function fixWidth(){
-            itemWidth = $('.menu__slider .slider__item').outerWidth();
+            itemWidth = $('.slider__group .slider__item').outerWidth();
             itemsWidth = itemWidth * itemsLength;
             $sliderBanner.width(itemsWidth)
         }fixWidth();
@@ -135,4 +142,107 @@ $(document).ready(function() {
 
     }menuSlider();
 
+    /* Chief Slider */
+    function chiefSlider() {
+        let $sliderContainer = $('.chief__slider');
+        let $slider = $sliderContainer.find('.slider__group');
+        let $sliderBanner = $sliderContainer.find('.slider__banner');
+        let $sliderItems = $sliderBanner.find('.slider__item');
+        let $nextBtn = $sliderContainer.find('.arrow.next');
+        let $prevBtn = $sliderContainer.find('.arrow.prev');
+
+        let itemsLength = $sliderItems.length;
+
+        let slideToShow = 1;
+        let activeSlides = slideToShow;
+
+        // function responsiveSlides() {
+        //     activeSlides -= slideToShow;
+        //     if($(window).width() <= 991 && $(window).width() > 550){
+        //         slideToShow = 2;
+        //     }else if($(window).width() <= 550){
+        //         slideToShow = 1;
+        //     }
+        //     else {
+        //         slideToShow = 3;
+        //     }
+        //     activeSlides += slideToShow;
+        // }responsiveSlides();
+
+
+        let itemsWidth;
+        let itemWidth;
+
+        $sliderItems.outerWidth(parseInt($slider.width() / slideToShow));
+
+        function fixWidth(){
+            itemWidth = $('.chief__slider .slider__item').outerWidth();
+            itemsWidth = itemWidth * itemsLength;
+            $sliderBanner.width(itemsWidth)
+        }fixWidth();
+
+        function leftCalc(){
+            return itemWidth * itemMove;
+        }
+
+        $(window).resize(function(){
+
+            $sliderItems.outerWidth(parseInt($slider.width() / slideToShow));
+            fixWidth();
+            $sliderBanner.css('left', -leftCalc());
+        });
+
+        let left = 0;
+        let itemMove = 0;
+        let clicked = false;
+
+        /* Check btn status */
+        function checkStatus(){
+            if(activeSlides == itemsLength){
+                $nextBtn.addClass('disabled')
+            }else {
+                $nextBtn.removeClass('disabled')
+            }
+
+            if(activeSlides == slideToShow){
+                $prevBtn.addClass('disabled')
+            }else {
+                $prevBtn.removeClass('disabled')
+            }
+        }checkStatus();
+
+        $nextBtn.click(function(){
+            if(!clicked) {
+                if (activeSlides != itemsLength) {
+                    clicked = true;
+                    itemMove++;
+                    left = -leftCalc();
+                    $sliderBanner.css('left', left);
+                    activeSlides++;
+                    setTimeout(function(){
+                        clicked = false;
+                    }, 400);
+                    checkStatus();
+                }
+            }
+        })
+
+        $prevBtn.click(function(){
+            if(!clicked) {
+                if (activeSlides > slideToShow) {
+                    clicked = true;
+                    itemMove--;
+                    left = -leftCalc();
+                    $sliderBanner.css('left', left);
+                    activeSlides--;
+                    setTimeout(function(){
+                        clicked = false;
+                    }, 400);
+                    checkStatus();
+                }
+            }
+        })
+
+
+    }chiefSlider();
 });
