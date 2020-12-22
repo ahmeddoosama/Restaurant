@@ -51,26 +51,28 @@ main {
             .slider__container {
                 .menu__slider {
                     position: relative;
-                    .card {
-                        .card__img {
-                            &.have__price {
-                                margin-bottom: 50px;
-                            }
-                            .price__holder {
-                                position: absolute;
-                                bottom: -40px;
-                                right: 0;
-                                left: 0;
-                                text-align: $text-align-center;
-                                .price {
-                                    width: 80px;
-                                    height: 80px;
-                                    display: inline-block;
-                                    background-color: $white;
-                                    font-size: 35px;
-                                    border-radius: 50%;
-                                    line-height: 80px;
-                                    box-shadow: 0px 0px 0px 5px rgba(255, 255, 255, 0.4);
+                    .slider__item {
+                        .card {
+                            .card__img {
+                                &.have__price {
+                                    margin-bottom: 50px;
+                                }
+                                .price__holder {
+                                    position: absolute;
+                                    bottom: -40px;
+                                    right: 0;
+                                    left: 0;
+                                    text-align: $text-align-center;
+                                    .price {
+                                        width: 80px;
+                                        height: 80px;
+                                        display: inline-block;
+                                        background-color: $white;
+                                        font-size: 35px;
+                                        border-radius: 50%;
+                                        line-height: 80px;
+                                        box-shadow: 0px 0px 0px 5px rgba(255, 255, 255, 0.4);
+                                    }
                                 }
                             }
                         }
