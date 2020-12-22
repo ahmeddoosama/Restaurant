@@ -155,6 +155,9 @@ section {
 .ratio-holder .ratio.menu-ratio {
   padding-top: 70%;
 }
+.ratio-holder .ratio.chief-img-ratio {
+  padding-top: 163%;
+}
 .ratio-holder .ratio-content {
   position: absolute;
   top: 0;
@@ -708,13 +711,27 @@ main .testimonials__section .testimonial__author h5:after {
   vertical-align: middle;
   margin-left: 3px;
 }
+main .chief__testimonials {
+  padding-bottom: 50px;
+}
+main .chief__testimonials .chief__img img {
+  width: 65%;
+}
 @media only screen and (max-width: 767px) {
+  main .chief__testimonials .chief__img {
+    display: none;
+  }
   main .chief__testimonials .title,
 main .chief__testimonials .section__body {
     text-align: center;
   }
   main .chief__testimonials .title h2 {
     font-size: 30px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  main .chief__testimonials .chief__img img {
+    width: 100%;
   }
 }
 

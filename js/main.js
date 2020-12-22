@@ -156,20 +156,6 @@ $(document).ready(function() {
         let slideToShow = 1;
         let activeSlides = slideToShow;
 
-        // function responsiveSlides() {
-        //     activeSlides -= slideToShow;
-        //     if($(window).width() <= 991 && $(window).width() > 550){
-        //         slideToShow = 2;
-        //     }else if($(window).width() <= 550){
-        //         slideToShow = 1;
-        //     }
-        //     else {
-        //         slideToShow = 3;
-        //     }
-        //     activeSlides += slideToShow;
-        // }responsiveSlides();
-
-
         let itemsWidth;
         let itemWidth;
 
