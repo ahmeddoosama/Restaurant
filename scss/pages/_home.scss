@@ -86,4 +86,52 @@ main {
         }
     }
     /* End Menu Section */
+
+    /* Start testimonials Section */
+    .testimonials__section {
+        background: linear-gradient(rgba($black ,0.4), rgba($black ,0.4)), url('../images/background/bg-2.jpg');
+        height: auto;
+        min-height: auto;
+        background-position: center center;
+        background-attachment: fixed;
+        text-align: $text-align-center;
+        color: $white;
+        padding: 90px 15px;
+        font-weight: $font-weight-700;
+        .testimonial__icon {
+            font-size: 35px;
+            margin-bottom: 50px;
+        }
+        .testimonial__content {
+            .paragraph {
+                color: $white;
+                font-size: 25px;
+            }
+        }
+        .testimonial__author {
+            h5 {
+                &:before {
+                    content: '';
+                    width: 7px;
+                    height: 1px;
+                    display: inline-block;
+                    background-color: $white;
+                    vertical-align: middle;
+                    margin-right: 3px;
+                }
+                font-size: 14px;
+                margin-top: 70px;
+                &:after {
+                    content: '';
+                    width: 7px;
+                    height: 1px;
+                    display: inline-block;
+                    background-color: $white;
+                    vertical-align: middle;
+                    margin-left: 3px;
+                }
+            }
+        }
+    }
+    /* End testimonials Section */
 }

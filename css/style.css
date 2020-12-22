@@ -568,6 +568,8 @@ main {
   /* End our story Section */
   /* Start Menu Section */
   /* End Menu Section */
+  /* Start testimonials Section */
+  /* End testimonials Section */
 }
 main .our__story {
   padding-top: 160px;
@@ -633,6 +635,47 @@ main .menu__section .slider .slider__container .menu__slider .slider__item .card
 main .menu__section .link {
   font-size: 20px;
   margin-bottom: 35px;
+}
+main .testimonials__section {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/background/bg-2.jpg");
+  height: auto;
+  min-height: auto;
+  background-position: center center;
+  background-attachment: fixed;
+  text-align: center;
+  color: #FFF;
+  padding: 90px 15px;
+  font-weight: 700;
+}
+main .testimonials__section .testimonial__icon {
+  font-size: 35px;
+  margin-bottom: 50px;
+}
+main .testimonials__section .testimonial__content .paragraph {
+  color: #FFF;
+  font-size: 25px;
+}
+main .testimonials__section .testimonial__author h5 {
+  font-size: 14px;
+  margin-top: 70px;
+}
+main .testimonials__section .testimonial__author h5:before {
+  content: "";
+  width: 7px;
+  height: 1px;
+  display: inline-block;
+  background-color: #FFF;
+  vertical-align: middle;
+  margin-right: 3px;
+}
+main .testimonials__section .testimonial__author h5:after {
+  content: "";
+  width: 7px;
+  height: 1px;
+  display: inline-block;
+  background-color: #FFF;
+  vertical-align: middle;
+  margin-left: 3px;
 }
 
 /*# sourceMappingURL=style.css.map */
