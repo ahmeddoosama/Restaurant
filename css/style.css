@@ -693,6 +693,8 @@ main {
   /* End Chief testimonials Section */
   /* Start news Section */
   /* End news Section */
+  /* Start contact-Us section */
+  /* End contact-Us section */
 }
 main .our__story {
   padding-top: 160px;
@@ -870,6 +872,75 @@ main .news__section .card__group .grid-card-6 {
     margin-left: -10px;
     bottom: 100%;
     top: auto;
+  }
+}
+main .contactUs__section .title {
+  margin-bottom: 50px;
+}
+main .contactUs__section .section__body {
+  background-color: #FFF;
+  padding: 50px 45px;
+}
+main .contactUs__section .section__body .line__bottom {
+  position: relative;
+}
+main .contactUs__section .section__body .line__bottom::before {
+  content: "";
+  display: block;
+  width: 70px;
+  border-bottom: 3px solid #333;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+main .contactUs__section .section__body .country__city {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 0 0 10px;
+}
+main .contactUs__section .section__body .country__city .country {
+  color: #ccc;
+}
+main .contactUs__section .section__body .address {
+  margin: 0 0 30px;
+}
+main .contactUs__section .section__body .call__us .phone__number {
+  margin-bottom: 30px;
+  font-size: 35px;
+}
+main .contactUs__section .section__body .service {
+  margin-bottom: 40px;
+}
+main .contactUs__section .section__body .service .servie__title {
+  margin-bottom: 8px;
+  font-size: 17px;
+}
+main .contactUs__section .section__body .service .paragraph {
+  font-size: 13px;
+  margin: 0 0 3px;
+}
+main .contactUs__section .section__body .service .paragraph:last-child {
+  margin-bottom: 0;
+  line-height: 1;
+}
+main .contactUs__section .section__body .service:last-child {
+  margin-bottom: 0;
+}
+@media only screen and (max-width: 767px) {
+  main .contactUs__section .title {
+    margin-bottom: 50px;
+  }
+  main .contactUs__section .title .section__title {
+    font-size: 30px;
+  }
+  main .contactUs__section .section__body {
+    text-align: start;
+  }
+  main .contactUs__section .section__body .line__bottom::before {
+    display: none;
+  }
+  main .contactUs__section .section__body .call__us .phone__number {
+    font-size: 26px;
   }
 }
 

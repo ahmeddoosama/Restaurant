@@ -272,6 +272,85 @@ main {
             }
         }
     }
-
     /* End news Section */
+
+    /* Start contact-Us section */
+    .contactUs__section {
+        .title {
+            margin-bottom: 50px;
+        }
+        .section__body {
+            background-color: $white;
+            padding: 50px 45px;
+            .line__bottom {
+                position: relative;
+                &::before {
+                    content: '';
+                    display: block;
+                    width: 70px;
+                    border-bottom: 3px solid $gray;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                }
+            }
+            .country__city {
+                font-size: 30px;
+                font-weight: $font-weight-600;
+                margin: 0 0 10px;
+                .country {
+                    color: $smokeWhite;
+                }
+            }
+            .address {
+                margin: 0 0 30px;
+            }
+            .call__us {
+                .phone__number {
+                    margin-bottom: 30px;
+                    font-size: 35px;
+                }
+            }
+            .service {
+                margin-bottom: 40px;
+                .servie__title {
+                    margin-bottom: 8px;
+                    font-size: 17px;
+                }
+                .paragraph {
+                    font-size: 13px;
+                    margin: 0 0 3px;
+                    &:last-child {
+                        margin-bottom: 0;
+                        line-height: 1;
+                    }
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        @media #{$smallDevices} {
+            .title {
+                margin-bottom: 50px;
+                .section__title {
+                    font-size: 30px;
+                }
+            }
+            .section__body {
+                text-align: $text-align-start;
+                .line__bottom {
+                    &::before {
+                        display: none;
+                    }
+                }
+                .call__us {
+                    .phone__number {
+                        font-size: 26px;
+                    }
+                }
+            }
+        }
+    }
+    /* End contact-Us section */
 }
