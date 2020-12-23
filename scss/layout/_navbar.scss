@@ -144,15 +144,15 @@ nav {
             }
         }
 
-        .nav-list {
-            overflow-x: hidden;
-        }
+        // .nav-list {
+        //     overflow-x: hidden;
+        // }
 
         &:not(.active) {
             .nav-list {
-                transition: 1s;
-                transition-delay: 1.4s;
                 margin-right: -200px;
+                transition: 0.1s;
+                transition-delay: 1.4s;
                 .list-item {
                     right: -200px;
                 }

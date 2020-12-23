@@ -30,6 +30,7 @@ html {
 }
 
 body {
+  overflow-x: hidden;
   font-size: 14px;
 }
 
@@ -88,7 +89,7 @@ button:focus {
 */
 section {
   height: 100%;
-  padding-top: 92px;
+  padding-top: 80px;
 }
 
 /* overlay */
@@ -111,18 +112,25 @@ section {
 .title {
   color: #333;
   line-height: 1;
+  margin-bottom: 40px;
 }
 .title .small__title {
-  font-weight: 600;
+  font-weight: 700;
   font-size: 12px;
   display: block;
   letter-spacing: 9px;
   color: #999999;
   margin-bottom: 25px;
+  text-transform: uppercase;
 }
 .title .section__title {
   font-size: 45px;
   font-weight: 700;
+}
+@media only screen and (max-width: 767px) {
+  .title .section__title {
+    font-size: 29px;
+  }
 }
 
 /*
@@ -470,6 +478,7 @@ header .header__info .info__img {
 }
 header .header__info .info {
   font-size: 12px;
+  font-weight: 600;
   color: #FFF;
   text-align: end;
   position: absolute;
@@ -617,13 +626,10 @@ nav.sticky .nav-list .list-item {
   nav .nav-btn .btn-line:last-child {
     margin-bottom: 0;
   }
-  nav .nav-list {
-    overflow-x: hidden;
-  }
   nav:not(.active) .nav-list {
-    transition: 1s;
-    transition-delay: 1.4s;
     margin-right: -200px;
+    transition: 0.1s;
+    transition-delay: 1.4s;
   }
   nav:not(.active) .nav-list .list-item {
     right: -200px;
@@ -798,9 +804,6 @@ main .our__story .video::before {
   main .our__story {
     padding-top: 50px;
   }
-  main .our__story .title .section__title {
-    font-size: 29px;
-  }
   main .our__story .video {
     width: 90%;
     margin: 0 auto;
@@ -889,6 +892,9 @@ main .chief__testimonials .section__body .slider {
   padding-bottom: 0;
 }
 @media only screen and (max-width: 767px) {
+  main .chief__testimonials {
+    padding-bottom: 40px;
+  }
   main .chief__testimonials .chief__img {
     display: none;
   }
@@ -896,8 +902,8 @@ main .chief__testimonials .section__body .slider {
 main .chief__testimonials .section__body {
     text-align: center;
   }
-  main .chief__testimonials .title h2 {
-    font-size: 30px;
+  main .chief__testimonials .slider {
+    padding: 0;
   }
 }
 main .news__section .card__group .arrow:before {
@@ -927,13 +933,23 @@ main .news__section .card__group .arrow.arrow-top::before {
   bottom: 100%;
   top: auto;
 }
+@media (min-width: 768px) and (max-width: 1022px) {
+  main .news__section .section__body .new_card .card__content {
+    padding-top: 20px;
+  }
+  main .news__section .section__body .new_card .card__content .card__title {
+    margin-bottom: 20px;
+  }
+  main .news__section .section__body .new_card .card__content .card__title h4 {
+    font-size: 15px;
+    padding-bottom: 20px;
+  }
+  main .news__section .section__body .new_card .card__content .paragraph {
+    font-size: 10px;
+    line-height: 1;
+  }
+}
 @media only screen and (max-width: 767px) {
-  main .news__section .title {
-    padding-bottom: 40px;
-  }
-  main .news__section .title .section__title {
-    font-size: 32px;
-  }
   main .news__section .card__group .grid-card-2,
 main .news__section .card__group .grid-card-4,
 main .news__section .card__group .grid-card-6 {
@@ -949,9 +965,6 @@ main .news__section .card__group .grid-card-6 {
     bottom: 100%;
     top: auto;
   }
-}
-main .contactUs__section .title {
-  margin-bottom: 50px;
 }
 main .contactUs__section .section__body {
   background-color: #FFF;
@@ -1002,6 +1015,9 @@ main .contactUs__section .section__body .service .paragraph:last-child {
 main .contactUs__section .section__body .service:last-child {
   margin-bottom: 0;
 }
+main .contactUs__section .map {
+  margin-bottom: -4px;
+}
 main .contactUs__section .map iframe {
   width: 100%;
   height: 500px;
@@ -1017,12 +1033,6 @@ main .contactUs__section .map iframe {
   }
 }
 @media only screen and (max-width: 767px) {
-  main .contactUs__section .title {
-    margin-bottom: 50px;
-  }
-  main .contactUs__section .title .section__title {
-    font-size: 30px;
-  }
   main .contactUs__section .section__body {
     text-align: start;
     margin-bottom: 20px;

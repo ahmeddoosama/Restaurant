@@ -30,6 +30,7 @@ html {
 }
 
 body {
+    overflow-x: hidden;
     font-size: $body-font-size;
     // font-family: $body-font-family;
 }
@@ -93,7 +94,7 @@ button {
 */
 section {
     height: 100%;
-    padding-top: 92px;
+    padding-top: 80px;
 }
 
 /* overlay */
@@ -116,19 +117,25 @@ section {
 .title {
     color: $gray;
     line-height: 1;
-
+    margin-bottom: 40px;
     .small__title {
-        font-weight: $font-weight-600;
+        font-weight: $font-weight-700;
         font-size: 12px;
         display: block;
         letter-spacing: 9px;
         color: $smokeGray;
         margin-bottom: 25px;
+        text-transform: uppercase;
     }
 
     .section__title {
         font-size: 45px;
         font-weight: $font-weight-700;
+    }
+    @media #{$smallDevices} {
+        .section__title {
+            font-size: 29px;
+        }
     }
 }
 

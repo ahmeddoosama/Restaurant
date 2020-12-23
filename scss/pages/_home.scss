@@ -36,12 +36,6 @@ main {
         @media #{$smallDevices} {
             padding-top: 50px;
 
-            .title {
-                .section__title {
-                    font-size: 29px;
-                }
-            }
-
             .video {
                 width: 90%;
                 margin: 0 auto;
@@ -173,6 +167,7 @@ main {
         }
 
         @media #{$smallDevices} {
+            padding-bottom: 40px;
             .chief__img {
                 display: none;
             }
@@ -182,10 +177,8 @@ main {
                 text-align: $text-align-center;
             }
 
-            .title {
-                h2 {
-                    font-size: 30px;
-                }
+            .slider {
+                padding: 0;
             }
         }
     }
@@ -235,15 +228,28 @@ main {
             }
         }
 
-        @media #{$smallDevices} {
-
-            .title {
-                padding-bottom: 40px;
-                .section__title {
-                    font-size: 32px;
+        @media (min-width: 768px) and (max-width: 1022px) {
+            .section__body {
+                .new_card {
+                    .card__content {
+                        padding-top: 20px;
+                        .card__title {
+                            margin-bottom: 20px;
+                            h4 {
+                                font-size: 15px;
+                                padding-bottom: 20px;
+                            }
+                        }
+                        .paragraph {
+                            font-size: 10px;
+                            line-height: 1;
+                        }
+                    }
                 }
             }
+        }
 
+        @media #{$smallDevices} {
             .card__group {
 
                 .grid-card-2,
@@ -276,9 +282,6 @@ main {
 
     /* Start contact-Us section */
     .contactUs__section {
-        .title {
-            margin-bottom: 50px;
-        }
         .section__body {
             background-color: $white;
             padding: 50px 45px;
@@ -332,6 +335,7 @@ main {
         }
 
         .map {
+            margin-bottom: -4px;
             iframe {
                 width: 100%;
                 height: 500px;
@@ -350,12 +354,6 @@ main {
         }
 
         @media #{$smallDevices} {
-            .title {
-                margin-bottom: 50px;
-                .section__title {
-                    font-size: 30px;
-                }
-            }
             .section__body {
                 text-align: $text-align-start;
                 margin-bottom: 20px;
