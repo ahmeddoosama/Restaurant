@@ -926,6 +926,20 @@ main .contactUs__section .section__body .service .paragraph:last-child {
 main .contactUs__section .section__body .service:last-child {
   margin-bottom: 0;
 }
+main .contactUs__section .map iframe {
+  width: 100%;
+  height: 500px;
+}
+@media only screen and (min-width: 768px) {
+  main .contactUs__section .section__body {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: -50px;
+    position: relative;
+    z-index: 1;
+    bottom: -30px;
+  }
+}
 @media only screen and (max-width: 767px) {
   main .contactUs__section .title {
     margin-bottom: 50px;
@@ -935,6 +949,7 @@ main .contactUs__section .section__body .service:last-child {
   }
   main .contactUs__section .section__body {
     text-align: start;
+    margin-bottom: 20px;
   }
   main .contactUs__section .section__body .line__bottom::before {
     display: none;

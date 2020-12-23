@@ -330,6 +330,25 @@ main {
                 }
             }
         }
+
+        .map {
+            iframe {
+                width: 100%;
+                height: 500px;
+            }
+        }
+
+        @media #{$AllLargeDevices} {
+            .section__body {
+                width: 80%;
+                margin: 0 auto;
+                margin-bottom: -50px;
+                position: relative;
+                z-index: 1;
+                bottom: -30px;
+            }
+        }
+
         @media #{$smallDevices} {
             .title {
                 margin-bottom: 50px;
@@ -339,6 +358,7 @@ main {
             }
             .section__body {
                 text-align: $text-align-start;
+                margin-bottom: 20px;
                 .line__bottom {
                     &::before {
                         display: none;
