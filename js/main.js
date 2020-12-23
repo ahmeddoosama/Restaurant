@@ -231,4 +231,19 @@ $(document).ready(function() {
 
 
     }chiefSlider();
+
+    // Scroll to Top
+    let scrollButton = $("#scroll-top");
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() >= 200) scrollButton.show();
+        else scrollButton.hide();
+    });
+
+    // Click On Button To Scroll Top
+    scrollButton.on('click', function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 400);
+    });
 });
