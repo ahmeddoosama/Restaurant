@@ -1,4 +1,12 @@
 $(document).ready(function() {
+
+    'use strict';
+
+    /* Loading Function */
+    $(window).on('load', function () {
+        $(".loader").delay(800).fadeOut();
+    });
+
     /* Nav button click event */
     let clicked = false;
     let $nav = $('nav');
