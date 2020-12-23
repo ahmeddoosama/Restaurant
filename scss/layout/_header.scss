@@ -15,6 +15,9 @@ header {
         color: $white;
         text-align: $text-align-end;
         font-size: 55px;
+        .small__title {
+            color: $smokelite;
+        }
     }
     .header__info {
         position: absolute;
