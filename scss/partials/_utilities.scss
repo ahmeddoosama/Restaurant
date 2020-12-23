@@ -12,7 +12,8 @@
 *
 ***/
 
-html, body {
+html,
+body {
     height: 100%;
 }
 
@@ -104,7 +105,7 @@ section {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 2;
     cursor: pointer;
 }
@@ -115,6 +116,7 @@ section {
 .title {
     color: $gray;
     line-height: 1;
+
     .small__title {
         font-weight: $font-weight-600;
         font-size: 12px;
@@ -123,6 +125,7 @@ section {
         color: $smokeGray;
         margin-bottom: 25px;
     }
+
     .section__title {
         font-size: 45px;
         font-weight: $font-weight-700;
@@ -151,8 +154,10 @@ section {
 .ratio-holder {
     position: relative;
     overflow: hidden;
+
     .ratio {
         padding-top: 100%;
+
         &.video-ratio {
             padding-top: 120%;
         }
@@ -164,13 +169,19 @@ section {
         &.chief-img-ratio {
             padding-top: 163%;
         }
+
+        &.square-ratio {
+            padding-top: 100%;
+        }
     }
+
     .ratio-content {
         position: absolute;
         top: 0;
         bottom: 0;
         left: 0;
         right: 0;
+
         .img {
             width: 100%;
             min-height: 100%;
@@ -186,6 +197,7 @@ section {
 /* Clickable anchor */
 .clickable__item {
     position: relative;
+
     .clickable__anchor {
         position: absolute;
         z-index: 2;
@@ -197,10 +209,38 @@ section {
 }
 
 /* links */
-.link, .link:hover, .link:focus{
+.link,
+.link:hover,
+.link:focus {
     font-size: 16px;
     text-decoration: underline;
     letter-spacing: 1px;
     font-weight: $font-weight-700;
     display: inline-block;
+}
+
+
+/**
+ *
+    > Grid System
+ *
+**/
+.grid-card-1 {
+    grid-area: grid-card-1;
+}
+
+.grid-card-2 {
+    grid-area: grid-card-2;
+}
+
+.grid-card-3 {
+    grid-area: grid-card-3;
+}
+
+.grid-card-4 {
+    grid-area: grid-card-4;
+}
+
+.grid-card-5 {
+    grid-area: grid-card-5;
 }

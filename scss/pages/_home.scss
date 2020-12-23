@@ -4,19 +4,23 @@
 
 /* ========== Home-Page ========== */
 main {
+
     /* Start our story Section */
     .our__story {
         padding-top: 160px;
         padding-bottom: 60px;
+
         .section__body {
             .paragraph {
                 margin: 40px 0;
             }
         }
+
         .video {
             width: 80%;
             float: right;
             margin: 0 auto;
+
             &::before {
                 content: '';
                 display: block;
@@ -28,13 +32,16 @@ main {
                 background: url('../images/background/dots.png') repeat;
             }
         }
+
         @media #{$smallDevices} {
             padding-top: 50px;
+
             .title {
                 .section__title {
                     font-size: 29px;
                 }
             }
+
             .video {
                 width: 90%;
                 margin: 0 auto;
@@ -42,27 +49,32 @@ main {
             }
         }
     }
+
     /* End our story Section */
 
     /* Start Menu Section */
     .menu__section {
         text-align: $text-align-center;
+
         .slider {
             .slider__container {
                 .slider__group {
                     position: relative;
+
                     .slider__item {
                         .card {
                             .card__img {
                                 &.have__price {
                                     margin-bottom: 50px;
                                 }
+
                                 .price__holder {
                                     position: absolute;
                                     bottom: -40px;
                                     right: 0;
                                     left: 0;
                                     text-align: $text-align-center;
+
                                     .price {
                                         width: 80px;
                                         height: 80px;
@@ -80,16 +92,18 @@ main {
                 }
             }
         }
+
         .link {
             font-size: 20px;
             margin-bottom: 35px;
         }
     }
+
     /* End Menu Section */
 
     /* Start testimonials Section */
     .testimonials__section {
-        background: linear-gradient(rgba($black ,0.4), rgba($black ,0.4)), url('../images/background/bg-2.jpg');
+        background: linear-gradient(rgba($black, 0.4), rgba($black, 0.4)), url('../images/background/bg-2.jpg');
         height: auto;
         min-height: auto;
         background-position: center center;
@@ -98,16 +112,19 @@ main {
         color: $white;
         padding: 90px 15px;
         font-weight: $font-weight-700;
+
         .testimonial__icon {
             font-size: 35px;
             margin-bottom: 50px;
         }
+
         .testimonial__content {
             .paragraph {
                 color: $white;
                 font-size: 25px;
             }
         }
+
         .testimonial__author {
             h5 {
                 &:before {
@@ -119,8 +136,10 @@ main {
                     vertical-align: middle;
                     margin-right: 3px;
                 }
+
                 font-size: 14px;
                 margin-top: 70px;
+
                 &:after {
                     content: '';
                     width: 7px;
@@ -133,38 +152,126 @@ main {
             }
         }
     }
+
     /* End testimonials Section */
 
     /* Start Chief testimonials Section */
     .chief__testimonials {
-        padding-bottom: 50px;
         .chief__img {
+            max-width: 350px;
+
             img {
-                width: 65%;
+                width: 100%;
+                min-height: 100%;
             }
         }
+
+        .section__body {
+            .slider {
+                padding-bottom: 0;
+            }
+        }
+
         @media #{$smallDevices} {
             .chief__img {
                 display: none;
             }
+
             .title,
             .section__body {
                 text-align: $text-align-center;
             }
+
             .title {
                 h2 {
                     font-size: 30px;
                 }
             }
         }
+    }
 
-        @media #{$MediumDevices} {
-            .chief__img {
-                img {
-                    width: 100%;
+    /* End Chief testimonials Section */
+
+    /* Start news Section */
+    .news__section {
+        .card__group {
+            .arrow {
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    margin-top: -10px;
+                    border-top: 10px solid transparent;
+                    border-bottom: 10px solid transparent;
+                    z-index: 1;
+                }
+
+                &.arrow-left {
+                    &::before {
+                        border-right: 15px solid $white;
+                        right: 100%;
+                    }
+                }
+
+                &.arrow-right {
+                    &::before {
+                        border-left: 15px solid $white;
+                        left: 100%;
+                    }
+                }
+
+                &.arrow-top {
+                    &::before {
+                        border-top: none;
+                        border-bottom: 15px solid $white;
+                        border-right: 10px solid transparent;
+                        border-left: 10px solid transparent;
+                        left: 50%;
+                        margin-left: -10px;
+                        bottom: 100%;
+                        top: auto;
+                    }
+                }
+            }
+        }
+
+        @media #{$smallDevices} {
+
+            .title {
+                padding-bottom: 40px;
+                .section__title {
+                    font-size: 32px;
+                }
+            }
+
+            .card__group {
+
+                .grid-card-2,
+                .grid-card-4,
+                .grid-card-6 {
+                    margin-bottom: 20px;
+                }
+
+                .arrow {
+
+                    &.arrow-left,
+                    &.arrow-right,
+                    &.arrow-top {
+                        &::before {
+                            border-top: none;
+                            border-bottom: 15px solid $white;
+                            border-right: 10px solid transparent;
+                            border-left: 10px solid transparent;
+                            left: 50%;
+                            margin-left: -10px;
+                            bottom: 100%;
+                            top: auto;
+                        }
+                    }
                 }
             }
         }
     }
-    /* End Chief testimonials Section */
+
+    /* End news Section */
 }

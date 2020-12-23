@@ -12,7 +12,8 @@ Written by: 	Ahmed Osama Bedawy - (https://github.com/ahmeddoosama)
 ====================================================================
 *
 ***/
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -158,6 +159,9 @@ section {
 .ratio-holder .ratio.chief-img-ratio {
   padding-top: 163%;
 }
+.ratio-holder .ratio.square-ratio {
+  padding-top: 100%;
+}
 .ratio-holder .ratio-content {
   position: absolute;
   top: 0;
@@ -189,12 +193,39 @@ section {
 }
 
 /* links */
-.link, .link:hover, .link:focus {
+.link,
+.link:hover,
+.link:focus {
   font-size: 16px;
   text-decoration: underline;
   letter-spacing: 1px;
   font-weight: 700;
   display: inline-block;
+}
+
+/**
+ *
+    > Grid System
+ *
+**/
+.grid-card-1 {
+  grid-area: grid-card-1;
+}
+
+.grid-card-2 {
+  grid-area: grid-card-2;
+}
+
+.grid-card-3 {
+  grid-area: grid-card-3;
+}
+
+.grid-card-4 {
+  grid-area: grid-card-4;
+}
+
+.grid-card-5 {
+  grid-area: grid-card-5;
 }
 
 /* ========== Contain Button style ========== */
@@ -345,6 +376,62 @@ section {
 }
 .card .card__img {
   position: relative;
+}
+
+/**
+ *
+    > news__section cards
+ *
+**/
+.news__section .card__group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 3% 10%;
+  grid-template-areas: "grid-card-1 grid-card-2 grid-card-3" "grid-card-4 grid-card-5 grid-card-6";
+}
+.news__section .card__group .card {
+  padding: 0;
+}
+.news__section .card__group .card img {
+  width: 100%;
+  min-height: 100%;
+}
+.news__section .card__group .card .card__content {
+  padding-top: 20%;
+}
+.news__section .card__group .card .card__content .card__title {
+  position: relative;
+  margin-bottom: 30px;
+}
+.news__section .card__group .card .card__content .card__title h4 {
+  font-size: 18px;
+  max-width: 200px;
+  margin: 0 auto;
+  font-weight: 600;
+  padding-bottom: 30px;
+}
+.news__section .card__group .card .card__content .card__title h4::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -25px;
+  width: 50px;
+  border-bottom: 1px dashed #ccc;
+  display: block;
+}
+.news__section .card__group .card .card__content .paragraph {
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+@media only screen and (max-width: 767px) {
+  .news__section .card__group {
+    grid-template-columns: repeat(1, 100%);
+    grid-template-areas: "grid-card-1" "grid-card-2" "grid-card-3" "grid-card-4" "grid-card-5" "grid-card-6";
+  }
+  .news__section .card__group .card__content {
+    padding: 10% 0 !important;
+  }
 }
 
 /* ========== Contain Header style ========== */
@@ -604,6 +691,8 @@ main {
   /* End testimonials Section */
   /* Start Chief testimonials Section */
   /* End Chief testimonials Section */
+  /* Start news Section */
+  /* End news Section */
 }
 main .our__story {
   padding-top: 160px;
@@ -711,11 +800,15 @@ main .testimonials__section .testimonial__author h5:after {
   vertical-align: middle;
   margin-left: 3px;
 }
-main .chief__testimonials {
-  padding-bottom: 50px;
+main .chief__testimonials .chief__img {
+  max-width: 350px;
 }
 main .chief__testimonials .chief__img img {
-  width: 65%;
+  width: 100%;
+  min-height: 100%;
+}
+main .chief__testimonials .section__body .slider {
+  padding-bottom: 0;
 }
 @media only screen and (max-width: 767px) {
   main .chief__testimonials .chief__img {
@@ -729,9 +822,54 @@ main .chief__testimonials .section__body {
     font-size: 30px;
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 1200px) {
-  main .chief__testimonials .chief__img img {
-    width: 100%;
+main .news__section .card__group .arrow:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  z-index: 1;
+}
+main .news__section .card__group .arrow.arrow-left::before {
+  border-right: 15px solid #FFF;
+  right: 100%;
+}
+main .news__section .card__group .arrow.arrow-right::before {
+  border-left: 15px solid #FFF;
+  left: 100%;
+}
+main .news__section .card__group .arrow.arrow-top::before {
+  border-top: none;
+  border-bottom: 15px solid #FFF;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  left: 50%;
+  margin-left: -10px;
+  bottom: 100%;
+  top: auto;
+}
+@media only screen and (max-width: 767px) {
+  main .news__section .title {
+    padding-bottom: 40px;
+  }
+  main .news__section .title .section__title {
+    font-size: 32px;
+  }
+  main .news__section .card__group .grid-card-2,
+main .news__section .card__group .grid-card-4,
+main .news__section .card__group .grid-card-6 {
+    margin-bottom: 20px;
+  }
+  main .news__section .card__group .arrow.arrow-left::before, main .news__section .card__group .arrow.arrow-right::before, main .news__section .card__group .arrow.arrow-top::before {
+    border-top: none;
+    border-bottom: 15px solid #FFF;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    left: 50%;
+    margin-left: -10px;
+    bottom: 100%;
+    top: auto;
   }
 }
 
