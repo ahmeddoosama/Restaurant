@@ -15,7 +15,7 @@ header {
         color: $white;
         text-align: $text-align-end;
         font-size: 55px;
-        .small__title {
+        .small-title {
             color: $smokelite;
         }
     }
@@ -27,7 +27,7 @@ header {
         .container {
             position: relative;
         }
-        .info__img {
+        .header__info__img {
             margin-bottom: -100px;
             box-shadow: 2px 12px 40px 0 rgba($black ,0.25);
             border-radius: 50%;
@@ -41,11 +41,11 @@ header {
             position: absolute;
             right: 0;
             bottom: 40px;
-            .phone__number {
+            .phone-number {
                 font-size: 26px;
                 margin: 0 0 25px;
             }
-            .small__title {
+            .small-title {
                 color: $smokeWhite;
                 margin: 0;
             }
@@ -53,12 +53,12 @@ header {
     }
     @media #{$MediumDevices} {
         height: 60%;
-        .info__img {
+        .header__info__img {
             width: 350px;
         }
     }
     @media #{$smallDevices} {
-        .info__img {
+        .header__info__img {
             display: none;
         }
         .title {

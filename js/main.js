@@ -10,7 +10,7 @@ $(document).ready(function() {
     /* Nav button click event */
     let clicked = false;
     let $nav = $('nav');
-    $nav.find('.nav-btn').click(function() {
+    $nav.find('.nav__btn').click(function() {
         if(!clicked) {
             clicked = true;
             $nav.toggleClass('active');

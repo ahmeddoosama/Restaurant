@@ -6,11 +6,11 @@
 main {
 
     /* Start our story Section */
-    .our__story {
+    .ourStory {
         padding-top: 160px;
         padding-bottom: 60px;
 
-        .section__body {
+        .section-body {
             .paragraph {
                 margin: 40px 0;
             }
@@ -47,7 +47,7 @@ main {
     /* End our story Section */
 
     /* Start Menu Section */
-    .menu__section {
+    .menuSection {
         text-align: $text-align-center;
 
         .slider {
@@ -96,7 +96,7 @@ main {
     /* End Menu Section */
 
     /* Start testimonials Section */
-    .testimonials__section {
+    .testimonialsSection {
         background: linear-gradient(rgba($black, 0.4), rgba($black, 0.4)), url('../images/background/bg-2.jpg');
         height: auto;
         min-height: auto;
@@ -150,8 +150,8 @@ main {
     /* End testimonials Section */
 
     /* Start Chief testimonials Section */
-    .chief__testimonials {
-        .chief__img {
+    .chiefTestimonials {
+        .chiefTestimonial__img {
             max-width: 350px;
 
             img {
@@ -160,7 +160,7 @@ main {
             }
         }
 
-        .section__body {
+        .section-body {
             .slider {
                 padding-bottom: 0;
             }
@@ -168,12 +168,12 @@ main {
 
         @media #{$smallDevices} {
             padding-bottom: 40px;
-            .chief__img {
+            .chiefTestimonial__img {
                 display: none;
             }
 
             .title,
-            .section__body {
+            .section-body {
                 text-align: $text-align-center;
             }
 
@@ -186,7 +186,7 @@ main {
     /* End Chief testimonials Section */
 
     /* Start news Section */
-    .news__section {
+    .newsSection {
         .card__group {
             .arrow {
                 &:before {
@@ -229,7 +229,7 @@ main {
         }
 
         @media (min-width: 768px) and (max-width: 1022px) {
-            .section__body {
+            .section-body {
                 .new_card {
                     .card__content {
                         padding-top: 20px;
@@ -281,8 +281,8 @@ main {
     /* End news Section */
 
     /* Start contact-Us section */
-    .contactUs__section {
-        .section__body {
+    .contactUs {
+        .section-body {
             background-color: $white;
             padding: 50px 45px;
             .line__bottom {
@@ -309,7 +309,7 @@ main {
                 margin: 0 0 30px;
             }
             .call__us {
-                .phone__number {
+                .phone-number {
                     margin-bottom: 30px;
                     font-size: 35px;
                 }
@@ -343,7 +343,7 @@ main {
         }
 
         @media #{$AllLargeDevices} {
-            .section__body {
+            .section-body {
                 width: 80%;
                 margin: 0 auto;
                 margin-bottom: -50px;
@@ -354,7 +354,7 @@ main {
         }
 
         @media #{$smallDevices} {
-            .section__body {
+            .section-body {
                 text-align: $text-align-start;
                 margin-bottom: 20px;
                 .line__bottom {
@@ -363,7 +363,7 @@ main {
                     }
                 }
                 .call__us {
-                    .phone__number {
+                    .phone-number {
                         font-size: 26px;
                     }
                 }

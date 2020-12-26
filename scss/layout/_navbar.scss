@@ -32,11 +32,11 @@ nav {
         }
     }
 
-    .nav-btn {
+    .nav__btn {
         display: none;
     }
 
-    .nav-list {
+    .nav__list {
         width: 100%;
         position: relative;
         top: 10px;
@@ -44,7 +44,7 @@ nav {
         font-size: 16px;
         font-weight: $font-weight-600;
 
-        .list-item {
+        .nav__list__item {
             display: inline-block;
             color: $white;
             margin-left: 40px;
@@ -78,16 +78,16 @@ nav {
             }
         }
 
-        .nav-list {
-            .list-item {
+        .nav__list {
+            .nav__list__item {
                 color: $gray;
             }
         }
     }
 
     @media #{$AllLargeDevices} {
-        .nav-list {
-            .list-item {
+        .nav__list {
+            .nav__list__item {
                 &::before {
                     content: '';
                     display: block;
@@ -114,8 +114,8 @@ nav {
         }
 
         &.sticky {
-            .nav-list {
-                .list-item:before {
+            .nav__list {
+                .nav__list__item:before {
                     background-color: $gray;
                 }
             }
@@ -123,7 +123,7 @@ nav {
     }
 
     @media #{$smallDevices} {
-        .nav-btn {
+        .nav__btn {
             position: absolute;
             display: block;
             right: 25px;
@@ -132,7 +132,7 @@ nav {
             border: none;
             margin-top: 16px;
 
-            .btn-line {
+            .nav__btn__line {
                 display: block;
                 height: 3px;
                 margin-bottom: 6px;
@@ -144,22 +144,22 @@ nav {
             }
         }
 
-        // .nav-list {
+        // .nav__list {
         //     overflow-x: hidden;
         // }
 
         &:not(.active) {
-            .nav-list {
+            .nav__list {
                 margin-right: -200px;
                 transition: 0.1s;
                 transition-delay: 1.4s;
-                .list-item {
+                .nav__list__item {
                     right: -200px;
                 }
             }
         }
 
-        .nav-list {
+        .nav__list {
             width: 200px;
             position: absolute;
             top: 100%;
@@ -168,7 +168,7 @@ nav {
             padding: 0;
             text-align: $text-align-center;
 
-            .list-item {
+            .nav__list__item {
                 position: relative;
                 right: 0;
                 display: block;
@@ -211,11 +211,11 @@ nav {
         }
 
         &.sticky {
-            .btn-line {
+            .nav__btn__line {
                 background-color: $gray;
             }
 
-            .list-item {
+            .nav__list__item {
                 color: $white !important;
             }
         }
